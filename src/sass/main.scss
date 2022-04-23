@@ -1,7 +1,105 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+* {
+  box-sizing: border-box;
+}
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #4830f0;
+}
+.submit {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-image: linear-gradient(to right, #9eefe1 0%, #158512 51%, #73e9d5 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+input {
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  padding: 10px 15px;
+  margin: 10px 20px;
+  border-radius: 10px;
+}
+
+.load-more {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 10px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-image: linear-gradient(to right, #9eefe1 0%, #4830f0 51%, #9eefe1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.gallery {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1540px;
+  grid-gap: 12px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  max-height: 320px;
+  max-width: 300px;
+}
+.info {
+  display: flex;
+  justify-content: center;
+}
+
+.info-item {
+  margin-left: 5px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+img {
+  display: block;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
