@@ -64,9 +64,7 @@ window.scrollBy({
   top: cardHeight * 2,
   behavior: "smooth",
 });
-    }
-}
-
+    }}
 function clearCards() {
     gallery.innerHTML = '';
 }
