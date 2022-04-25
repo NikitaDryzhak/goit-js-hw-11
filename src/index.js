@@ -16,15 +16,11 @@ const apiService = new ApiService()
 form.addEventListener('submit', searchImages)
 loadMoreBtn.addEventListener('click', onLoadMore)
 
-
-
 let galleryLightBox = new SimpleLightbox('.gallery a', {
     captions: true,
     captionsData: 'alt',
     captionDelay: 250,
     captionPosition:'bottom'});
-
-
 
 async function searchImages(e) {
     e.preventDefault()
@@ -38,8 +34,6 @@ async function searchImages(e) {
     else {
         Notiflix.Notify.failure('Something went wrong, please try again...');
     }
-    
-  
 }
 
 function onLoadMore() {
@@ -56,7 +50,6 @@ function appendHitsMarkup(data) {
         if (apiService.page === 2) {
         Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`) 
            loadMoreBtn.classList.remove('is-hidden')
-
             return
     } else 
     if (data.hits.length === 0 && data.totalHits !== 0) {
