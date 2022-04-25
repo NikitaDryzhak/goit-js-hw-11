@@ -27,8 +27,7 @@ async function searchImages(e) {
     clearCards();
     apiService.query = e.currentTarget.elements.searchQuery.value.trim();
     if (apiService.query) {
-               loadMoreBtn.classList.remove('is-hidden')
-
+    
     apiService.resetPage();
     apiService.apiFetch().then(appendHitsMarkup);
     }
@@ -50,6 +49,7 @@ function appendHitsMarkup(data) {
     } else
         if (apiService.page === 2) {
         Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`) 
+        loadMoreBtn.classList.remove('is-hidden')
             return
     } else 
     if (data.hits.length === 0 && data.totalHits !== 0) {
