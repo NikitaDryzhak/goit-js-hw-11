@@ -45,6 +45,8 @@ function appendHitsMarkup(data) {
     galleryLightBox.refresh()
     if (data.totalHits === 0) {
          Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
+                loadMoreBtn.classList.add('is-hidden')
+
         return
     } else
         if (apiService.page === 2) {
