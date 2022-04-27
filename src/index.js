@@ -44,8 +44,8 @@ function appendHitsMarkup(data) {
     gallery.insertAdjacentHTML('beforeend', markup(data.hits))
     galleryLightBox.refresh()
     if (data.totalHits === 0) {
+                    loadMoreBtn.classList.add('is-hidden')
          Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
-                loadMoreBtn.classList.add('is-hidden')
 
         return
     } else
@@ -54,7 +54,8 @@ function appendHitsMarkup(data) {
         loadMoreBtn.classList.remove('is-hidden')
             return
     } else 
-    if (data.hits.length === 0 && data.totalHits !== 0) {
+            if (data.hits.length === 0 && data.totalHits !== 0) {
+        loadMoreBtn.classList.add('is-hidden')
         Notiflix.Notify.warning("We're sorry, but you've reached the end of search results.")
         return
     } else {
